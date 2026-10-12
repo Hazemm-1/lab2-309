@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Studio component library: buttons, cards, tables, forms, modal and alerts.">
+    <title>Studio - Component library</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="logo" href="index.html">Studio</a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="components.html" aria-current="page">Components</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="container">
+      <section class="section">
+        <h1>Component library</h1>
+        <p class="label">Every style on this page comes from the CSS variables in styles.css.</p>
+      </section>
+
+      <section class="section" aria-labelledby="tokens-title">
+        <h2 id="tokens-title">Design tokens</h2>
+        <div class="swatches">
+          <div class="swatch"><i aria-hidden="true" style="background: var(--primary)"></i><code>--primary #2563eb</code></div>
+          <div class="swatch"><i aria-hidden="true" style="background: var(--bg)"></i><code>--bg #f8fafc</code></div>
+          <div class="swatch"><i aria-hidden="true" style="background: var(--text)"></i><code>--text #1e293b</code></div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="buttons-title">
+        <h2 id="buttons-title">Buttons</h2>
+        <div class="row">
+          <div>
+            <button class="btn" type="button">Default</button>
+            <div class="label">default</div>
+          </div>
+          <div>
+            <button class="btn is-hover" type="button">Hover</button>
+            <div class="label">hover</div>
+          </div>
+          <div>
+            <button class="btn" type="button" disabled>Disabled</button>
+            <div class="label">disabled</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="card-title">
+        <h2 id="card-title">Card</h2>
+        <article class="card" style="max-width: 360px">
+          <h3>Card title</h3>
+          <p>A short description that explains what this card is about.</p>
+          <a class="btn" href="#card-title">Read more<span class="sr-only"> about the card component</span></a>
+        </article>
+      </section>
+
+      <section class="section" aria-labelledby="form-title">
+        <h2 id="form-title">Form elements</h2>
+        <form class="form" action="#form-title" method="post">
+          <div class="field">
+            <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+            <input type="text" id="full-name" name="name" autocomplete="name" required placeholder="Ada Lovelace">
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-hint" placeholder="you@example.com">
+            <p class="hint" id="email-hint">We only use it to reply to you.</p>
+          </div>
+
+          <div class="field">
+            <label for="role">Role</label>
+            <select id="role" name="role">
+              <option value="">Choose a role</option>
+              <option value="engineer">Engineer</option>
+              <option value="designer">Designer</option>
+              <option value="researcher">Researcher</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="agree" name="agree">
+            <label for="agree">I agree to be contacted</label>
+          </div>
+
+          <div class="field">
+            <label for="locked">Disabled input</label>
+            <input type="text" id="locked" value="Read only value" disabled>
+          </div>
+
+          <div class="row">
+            <button class="btn" type="submit">Send message</button>
+            <button class="btn btn-outline" type="reset">Clear form</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="section" aria-labelledby="alerts-title">
+        <h2 id="alerts-title">Alerts</h2>
+
+        <div class="alert alert-success" role="status">
+          <p><span class="alert-title">Saved.</span> Your changes were saved.</p>
+        </div>
+
+        <div class="alert alert-info" role="status">
+          <p><span class="alert-title">Heads up.</span> Dark mode follows your system setting.</p>
+        </div>
+
+        <div class="alert alert-warning" role="status">
+          <p><span class="alert-title">Almost full.</span> You have used 90% of your storage.</p>
+        </div>
+
+        <div class="alert alert-error" role="alert">
+          <p><span class="alert-title">Could not send.</span> Check your connection and try again.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="modal-section-title">
+        <h2 id="modal-section-title">Modal window</h2>
+        <p class="label">Built with CSS only. The :target selector shows the modal when the URL ends with its id.</p>
+        <a class="btn" id="open-modal" href="#demo-modal">Open modal</a>
+
+        <div class="modal" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+          <a class="modal-backdrop" href="#open-modal" tabindex="-1" aria-hidden="true"></a>
+          <div class="modal-dialog">
+            <a class="modal-close" href="#open-modal" aria-label="Close dialog">&times;</a>
+            <h2 id="modal-title">Delete this file?</h2>
+            <p>This action cannot be undone. The file will be removed from your project.</p>
+            <div class="modal-actions">
+              <a class="btn" href="#open-modal">Delete file</a>
+              <a class="btn btn-outline" href="#open-modal">Cancel</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="table-title">
+        <h2 id="table-title">Responsive table</h2>
+        <div class="table-wrap" role="region" aria-labelledby="table-title" tabindex="0">
+          <table>
+            <caption class="sr-only">Team members and their status</caption>
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Email</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Ada Lovelace</td><td>Engineer</td><td>ada@example.com</td><td><span class="badge">Active</span></td></tr>
+              <tr><td>Linus Torvalds</td><td>Maintainer</td><td>linus@example.com</td><td><span class="badge">Active</span></td></tr>
+              <tr><td>Grace Hopper</td><td>Admiral</td><td>grace@example.com</td><td><span class="badge off">Away</span></td></tr>
+              <tr><td>Alan Turing</td><td>Researcher</td><td>alan@example.com</td><td><span class="badge">Active</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" style="margin-top: 48px">
+      <div class="container">Component library</div>
+    </footer>
+  </body>
+</html>

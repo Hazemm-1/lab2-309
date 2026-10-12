@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Studio: a small site that shows Flexbox, CSS Grid and responsive layout.">
+    <title>Studio - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="logo" href="index.html">Studio</a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="components.html">Components</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="container">
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">Build clean layouts with Flexbox and Grid</h1>
+        <p>This homepage uses Flexbox for the navigation and CSS Grid for the main content. Resize the window to see it switch between one, two and three columns.</p>
+        <div class="actions">
+          <a class="btn" href="components.html">View components</a>
+          <a class="btn btn-outline" href="#about">Learn more</a>
+        </div>
+      </section>
+
+      <div class="grid">
+        <article class="card">
+          <h2>Flexible navigation</h2>
+          <p>The header is a flex container. The logo and links are pushed apart with justify-content.</p>
+        </article>
+        <article class="card">
+          <h2>Grid content</h2>
+          <p>Cards sit in equal columns. The gap property handles all the spacing.</p>
+        </article>
+        <article class="card">
+          <h2>Two breakpoints</h2>
+          <p>One column on phones, two on tablets (700px and up) and three on desktop (1024px and up).</p>
+        </article>
+        <section class="card wide" id="about" aria-labelledby="about-title">
+          <h2 id="about-title">About this page</h2>
+          <p>This wide card spans every column. All colors, the radius and the spacing come from CSS variables defined once on :root, and dark mode follows your system setting.</p>
+        </section>
+        <section class="card wide" id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact</h2>
+          <p>Questions about the lab? Send us a message.</p>
+          <a class="btn" href="mailto:ta@example.com">Email the TA</a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">In-Lab Practice (Studio)</div>
+    </footer>
+  </body>
+</html>
